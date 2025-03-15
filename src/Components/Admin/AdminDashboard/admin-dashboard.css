@@ -1,0 +1,10 @@
+/* Modern Dashboard Styles */
+
+.admin-dashboard {
+  display: flex;
+}
+
+.admin-dashboard {
+  display: flex;
+  height: 100%; /* Full height of the screen */
+}

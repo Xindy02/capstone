@@ -1,0 +1,98 @@
+/* Sidebar Styles */
+.sidebar {
+    width: 280px;
+    height: 100%; /* Full height of the screen */
+    background: linear-gradient(180deg, #01082D, #495057); /* Stylish gradient background */
+    color: white;
+    padding: 20px 0; /* Vertical padding */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15); /* Subtle shadow effect */
+    position: fixed; /* Stays in place while scrolling */
+    top: 0;
+    left: 0;
+    overflow-y: auto; /* Scrollable if content overflows */
+    margin: 0; /* Remove any unintended margin */
+  }
+  
+  /* Sidebar Logo */
+  .sidebar img {
+    width: 100%; /* Full width for the logo container */
+    max-width: 120px; /* Maximum size for logo */
+    margin: 20px auto; /* Center the logo vertically and horizontally */
+    display: block; /* Block layout for centering */
+    border-radius: 50%; /* Circular logo */
+    border: 2px solid #6c757d; /* Border for style */
+    padding: 5px; /* Padding for consistent spacing */
+    background: white; /* White background for contrast */
+    pointer-events: none; /* Prevent logo interaction */
+    transition: none; /* Disable hover/animation effects */
+  }
+  
+  /* Sidebar Title */
+  .sidebar h2 {
+    font-size: 1.5rem; /* Title size */
+    margin: 15px 0; /* Spacing above and below */
+    text-align: center; /* Center-aligned text */
+    font-weight: 600; /* Bold text */
+    color: #f8f9fa; /* Bright text color */
+    text-transform: uppercase; /* All caps for modern style */
+    letter-spacing: 1px; /* Spacing between letters */
+  }
+  
+  /* Sidebar Links */
+  .sidebar a {
+    text-decoration: none; /* Remove underline */
+    color: #f8f9fa; /* Bright text color */
+    font-size: 1rem; /* Standard font size */
+    margin-bottom: 20px; /* Spacing between links */
+    display: flex; /* Flex for alignment */
+    align-items: center; /* Center text vertically */
+    padding: 10px 15px; /* Padding inside the link */
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+  }
+  
+  /* Sidebar Link Hover */
+  .sidebar a:hover {
+    background-color: #495057; /* Darker background on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  
+  /* Sidebar Responsive Adjustments */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 100%; /* Full width for smaller screens */
+      height: auto; /* Adjust height automatically */
+      position: relative; /* No fixed positioning */
+      padding: 15px; /* Reduce padding */
+      box-shadow: none; /* Remove shadow */
+    }
+  
+    .sidebar img {
+      max-width: 100px; /* Smaller logo size */
+    }
+  
+    .sidebar h2 {
+      font-size: 1.25rem; /* Smaller title size */
+    }
+  
+    .sidebar a {
+      font-size: 0.9rem; /* Smaller link size */
+      padding: 8px 10px; /* Adjust link padding */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .sidebar a {
+      font-size: 0.8rem; /* Further reduce link size */
+      padding: 6px 8px; /* Adjust padding */
+    }
+  
+    .sidebar img {
+      max-width: 80px; /* Further reduce logo size */
+    }
+  
+    .sidebar h2 {
+      font-size: 1rem; /* Further reduce title size */
+    }
+  }
+  

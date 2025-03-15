@@ -1,0 +1,311 @@
+
+/* Right Text */
+.right-text {
+  text-align: center;
+  font-size: 18px;
+  margin: 20px 0;
+  color: #004aad;
+}
+
+/* General styles for the container */
+.login-signup-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+/* Left Section: Form */
+.form-section {
+  width: 55%;
+}
+
+/* Right Section: Image */
+.image-container {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header .text {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header .underline {
+  width: 60px;
+  height: 3px;
+  background-color: #4285F4;
+  margin: 0 auto;
+}
+
+
+/* Inputs */
+.input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.input input {
+  width: 100%;
+  padding-left: 45px; /* Make enough space for the icon */
+  padding-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 40px;
+  font-size: 16px;
+}
+
+.input .icon {
+  position: absolute;
+  left: 15px; /* Adjust icon position */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.input input::placeholder {
+  color: #aaa;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  flex: 1; /* Ensure the image section takes available space */
+}
+
+.image-container img {
+  max-width: 80%; /* Adjust image size if needed */
+  height: auto;
+  border-radius: 8px;
+}
+
+
+.header .text {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+}
+
+.header .underline {
+  width: 60px;
+  height: 4px;
+  background-color: #004aad;
+  margin: 10px auto 20px auto;
+  border-radius: 2px;
+}
+
+
+
+.submit-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* Adjust spacing between texts */
+  margin-top: 15px;
+}
+
+.auth-links {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Align items vertically */
+  gap: 20px; /* Space between items */
+}
+
+.forgot-password {
+  margin-right: auto; /* Pushes "Lost Password?" to the left */
+}
+
+.toggle-text {
+  margin-top: 5%;
+  text-align: center; /* Centers "Already have an account? Login" */
+  color: #007bff;
+}
+
+.toggle-text:hover {
+  color: #0056b3;
+}
+
+.create-account {
+  margin-left: auto; /* Pushes "Create an account" to the right */
+}
+
+.toggle-text:hover {
+  color: #0056b3; /* Optional: Darker shade on hover */
+}
+
+.forgot-password a {
+  font-size: 14px;
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: none; /* Removes underline */
+}
+
+.forgot-password a:hover {
+  color: #0056b3; /* Optional: Darker shade on hover */
+}
+
+/* Action Button */
+.action-button {
+  width: 100%;
+  background-color: #004aad;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.action-button:hover {
+  background-color: #003a82;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #555555;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #555555;
+  margin: 0 10px;
+}
+
+
+
+/* Google Sign-In Button */
+.gsi-material-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 1px solid #d1d1d1;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  width: 250px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Align text to the left */
+}
+
+.gsi-material-button:hover {
+  background-color: #f8f8f8;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.gsi-material-button:active {
+  background-color: #e8e8e8;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.gsi-material-button-icon svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.gsi-material-button-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Spacing between icon and text */
+}
+
+.gsi-material-button-content-wrapper span {
+  font-size: 14px;
+  color: #757575;
+}
+
+
+.fsi-material-button {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Ensures the content is centered horizontally */
+  background-color: white;
+  border: 1px solid #d1d1d1;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  width: 250px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center the text inside */
+}
+
+/* Hover and Active Effects */
+.fsi-material-button:hover {
+  background-color: #f8f8f8;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.fsi-material-button:active {
+  background-color: #e8e8e8;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.fsi-material-button-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Ensure that the content inside this wrapper is also centered */
+  gap: 10px; /* Spacing between icon and text */
+}
+
+.fsi-material-button-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.fsi-material-button-content-wrapper span {
+  font-size: 14px;
+  color: #757575;
+}
+
+/* Adjust for Mobile Screens */
+@media (max-width: 600px) {
+  .gsi-material-button {
+    width: 200px;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
