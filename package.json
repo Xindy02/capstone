@@ -8,6 +8,7 @@
     "@babel/plugin-transform-optional-catch-binding": "^7.25.9",
     "@babel/plugin-transform-unicode-property-regex": "^7.25.9",
     "@sideway/address": "^5.0.0",
+    "axios": "^1.8.4",
     "bootstrap": "^5.3.3",
     "core-js": "^3.40.0",
     "cra-template": "1.2.0",
