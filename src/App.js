@@ -9,6 +9,7 @@ import AdminDashboard from './Components/Admin/AdminDashboard/admin-dashboard';
 import ManagePetGallery from './Components/Admin/ManagePetGallery/manage-pet-gallery';
 import PetAdoptionDetails from './Components/Admin/ManagePetGallery/pet-adoption-details';
 import ManageHomePage from './Components/Admin/ManageHome/manage-homepage';
+import PetDetails from './Components/Users/Pet-Gallery/pet-details';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/pet-gallery" element={<PetGallery />} />
+        <Route path="/pet-details" element={<PetDetails />} />
         <Route path="/services" element={<Services />} />
         <Route path="/qc-animal-pound" element={<QCAnimalPound />} />
         <Route path="/login-signup" element={<LoginSignup />} />

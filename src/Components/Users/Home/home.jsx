@@ -4,6 +4,9 @@ import "../../Assets/styles/main.css";
 import "./home.css";
 import HeroImage from '../../Assets/images/hero-image.jpg'; 
 import BGImage from '../../Assets/images/qcacac-bg.jpg'; 
+import Event1 from '../../Assets/images/event1.jpg';
+import Event2 from '../../Assets/images/event2.jpg';
+import EventCover from '../../Assets/images/event-cover.jpg';
 
 const images = [
   "/images/gallery-1.jpg",
@@ -129,23 +132,75 @@ export default function Home() {
         )}
       </div>
 
-      <section className="events-announcements" ref={(el) => sectionsRef.current.push(el)}>
-        <h2>Pet Events & Announcements</h2>
-        <div className="events-container">
-          <div className="event">
-            <h3>Adoption Fair</h3>
-            <p>Join us this weekend for a special adoption event at QC Park!</p>
-          </div>
-          <div className="event">
-            <h3>Vaccination Drive</h3>
-            <p>Free vaccinations available for stray and adopted pets. Visit our center on March 10.</p>
-          </div>
-          <div className="event">
-            <h3>Volunteer Orientation</h3>
-            <p>Learn how you can help! Attend our volunteer orientation on April 5.</p>
+      <section
+        className="events-announcements py-5 text-white w-100"
+        ref={(el) => sectionsRef.current.push(el)}
+        style={{
+          backgroundImage: 'url(https://your-image-url.com/cover.jpg)', // Replace with your actual image
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Full-width background wrapper */}
+        <div className="w-100">
+          {/* Content container with max-width */}
+          <div className="container-fluid bg-white bg-opacity-75">
+          <div className="mb-4">
+          <img 
+            src={EventCover} 
+            alt="Pet Events Cover" 
+            className="img-fluid " 
+            style={{ maxHeight: '300px', maxwidth: '900px', objectFit: 'cover' }} 
+          />
+        </div>
+
+            {/* Event Cards */}
+            <div className="row g-4">
+              {[
+                {
+                  date: '23 MAR',
+                  title: 'Studio Day For Dogs',
+                  time: '2024-03-29 @ 09:00 - 20:00',
+                  location: 'Dublin',
+                  tag: 'Family Fun Day',
+                  img: Event1
+                },
+                {
+                  date: '22 APR',
+                  title: 'Pups in the Park',
+                  time: '2024-04-20 @ 09:30 - 17:30',
+                  location: 'Cork',
+                  tag: 'Family Fun Day',
+                  img: Event2
+                }
+              ].map((event, index) => (
+                <div className="col-md-4" key={index}>
+                  <div className="card h-100 shadow-sm">
+                    <div className="position-relative">
+                      <div className="position-absolute top-0 start-0 bg-pink text-white px-2 py-1 fw-bold">
+                        {event.date}
+                      </div>
+                 
+                    <img 
+                      src={event.img} 
+                      className="card-img-top" 
+                      alt={event.title} 
+                      style={{ height: '350px', objectFit: 'cover' }} 
+                    />
+                      <h5 className="card-title">{event.title}</h5>
+                      <p className="card-text mb-1"><i className="bi bi-calendar-event me-1"></i>{event.time}</p>
+                      <p className="card-text mb-2"><i className="bi bi-geo-alt me-1"></i>{event.location}</p>
+                      <span className="badge bg-primary">{event.tag}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
+
 
       <footer className="bg-dark text-white text-center py-4">
         <p>&copy; 2025 Animal Care & Adoption Center. All rights reserved.</p>

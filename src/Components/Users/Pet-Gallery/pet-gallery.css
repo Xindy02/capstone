@@ -1,4 +1,53 @@
 
+#hero-container {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  text-align: center;
+  color: white;
+}
+
+#hero-bg {
+  background: url('../../Assets/images/pet-gallery-cover.jpg') no-repeat center center/cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+#hero-overlay {
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#hero-title {
+  position: relative;
+  z-index: 1;
+  font-family:  Helvetica, sans-serif, Arial;
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding-top: 120px;
+}
+
+#hero-cutout {
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 100px; /* Adjust based on layout */
+  height: 30px; /* Adjust height as needed */
+  background: white;
+  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+}
+
 
 .petgallery-container {
     width: 100%;
@@ -43,48 +92,93 @@
   background-color: #01082D; /* Blue background on hover */
   color: #fff; /* White text on hover */
 }
+.adopt-btn {
+  background-color: #041D56; /* Bootstrap Primary Blue */
+  height: 35px;
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 10px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+}
 
+.adopt-btn:hover {
+  background-color: #0F2573; /* Darker Blue on Hover */
+}
 
 .row.mb-4.justify-content-center {
     margin-bottom: 45px; /* Adds space between buttons and the card grid */
   }
+  
 
-/* Wallet-Sized Cards */
-.card {
-    width: 100%; /* Full width of column */
-    height: 200px; /* Fixed height */
-    margin: 0 auto; /* Center the card in its column */
+  .pet-card {
+    height: 100%; /* Makes sure the card fills the column */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+
+  .pet-card {
+    width: 100%;
+    height: 300px; /* Increased height for better layout */
+    margin: 0 auto;
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Important to contain absolutely positioned image if needed */
+    transition: box-shadow 0.3s ease;
   }
   
-  .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  .pet-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   }
   
-  .card-img-top {
+  /* Create a wrapper around the image for zoom handling */
+  .pet-card-img-wrapper {
     width: 100%;
-    height: 120px; /* Adjust height for image */
-    object-fit: cover; /* Ensure image scales properly */
+    height: 250px;
+    overflow: hidden;
+    position: relative;
   }
   
-  .card-body {
+  /* Image stays inside and zooms smoothly */
+ .pet-card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .pet-card-img-top:hover {
+    transform: scale(1.05);
+  }
+  
+  
+  .pet-card-body {
     padding: 10px;
     text-align: center;
   }
   
-  .card-title {
-    font-size: 0.9rem; /* Smaller font for title */
+  .pet-card-title {
+    font-family:  Helvetica, sans-serif, Arial;
+    font-size: 1.2rem; /* Smaller font for title */
     font-weight: bold;
   }
   
-  .card-text {
-    font-size: 0.75rem; /* Smaller font for text */
+  .pet-card-text {
+    font-size: 1rem; 
     color: #555;
+  }
+
+  .paw-icon {
+    font-size: 1rem;
+    color: #266CA9;
   }
   
   /* Grid Layout with Flexbox */
