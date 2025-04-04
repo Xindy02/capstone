@@ -1,3 +1,53 @@
+#qcap-hero-container {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  text-align: center;
+  color: white;
+}
+
+#qcap-hero-bg {
+  background: url('../../Assets/images/qcap-cover.jpg') no-repeat center center/cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+#qcap-hero-overlay {
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#qcap-hero-title {
+  position: relative;
+  z-index: 1;
+  font-family:  Helvetica, sans-serif, Arial;
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding-top: 120px;
+}
+
+#qcap-hero-cutout {
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 100px; /* Adjust based on layout */
+  height: 30px; /* Adjust height as needed */
+  background: white;
+  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+}
+
+
 /* Filter Container */
 .filter-container {
   display: flex;

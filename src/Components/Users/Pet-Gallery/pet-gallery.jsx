@@ -3,20 +3,28 @@ import { Link } from "react-router-dom";
 import { FaPaw } from 'react-icons/fa';
 import "../../Assets/styles/main.css";
 import "./pet-gallery.css";
+import Logo from '../../Assets/images/QCACAC-LOGO.png';
 import princess from '../../Assets/images/dog-princess.jpg';
 import master from '../../Assets/images/dog-master.jpg';
+import pipo from '../../Assets/images/cat-pipo.jpg';
+import daisy from '../../Assets/images/cat-daisy.jpg';
+import luna from '../../Assets/images/cat-luna.jpg';
+import max from '../../Assets/images/dog-max.jpg';
+import charlie from '../../Assets/images/dog-charlie.jpg';
+import bella from '../../Assets/images/dog-bella.jpg';
+
 
 export default function PetGallery() {
   // ✅ useState should be inside the component
   const [pets] = useState([
     { id: 1, name: "Princess", type: "dog", image: princess, description: "A sweet and friendly pup." },
     { id: 2, name: "Master", type: "dog", image: master, description: "A playful and energetic dog." },
-    { id: 3, name: "Pipo", type: "cat", image: "/images/pipo.jpg", description: "A curious and loving cat." },
-    { id: 4, name: "Bella", type: "dog", image: "/images/bella.jpg", description: "A gentle and affectionate dog." },
-    { id: 5, name: "Charlie", type: "dog", image: "/images/charlie.jpg", description: "A smart and obedient companion." },
-    { id: 6, name: "Daisy", type: "cat", image: "/images/daisy.jpg", description: "A fluffy cat with a playful heart." },
-    { id: 7, name: "Max", type: "dog", image: "/images/max.jpg", description: "Loyal, protective, and loving." },
-    { id: 8, name: "Luna", type: "cat", image: "/images/luna.jpg", description: "A beautiful cat who loves cuddles." },
+    { id: 3, name: "Pipo", type: "cat", image: pipo, description: "A curious and loving cat." },
+    { id: 4, name: "Bella", type: "dog", image: bella, description: "A gentle and affectionate dog." },
+    { id: 5, name: "Charlie", type: "dog", image: charlie, description: "A smart and obedient companion." },
+    { id: 6, name: "Daisy", type: "cat", image: daisy, description: "A fluffy cat with a playful heart." },
+    { id: 7, name: "Max", type: "dog", image: max, description: "Loyal, protective, and loving." },
+    { id: 8, name: "Luna", type: "cat", image: luna, description: "A beautiful cat who loves cuddles." },
   ]);
 
   return (
@@ -24,7 +32,7 @@ export default function PetGallery() {
       {/* Navigation Bar */}
       <nav id="navbar" className="navbar">
         <div className="navbar-header">
-          <img width="90px" height="85px" src="/images/QCACAC-LOGO.png" alt="LOGO" />
+        <img className="qcacac-logo" width="90px" height="85px" src="/images/QCACAC-LOGO.png" alt="LOGO" />
         </div>
         <ul className="navbar-links">
           <li><a href="/">Home</a></li>
@@ -41,7 +49,7 @@ export default function PetGallery() {
        <header id="hero-container" className="position-relative text-center text-white">
         <div id="hero-bg" className="hero-bg"></div> {/* Background Image */}
         <div id="hero-overlay" className="hero-overlay"></div> {/* Dark Overlay */}
-        <h1 id="hero-title" className="hero-title">Adopt a Pet</h1>
+        <h1 id="hero-title" className="hero-title">ADOPT A PET</h1>
         <div id="hero-cutout" className="hero-cutout"></div> {/* Triangle Cutout */}
       </header>
 
@@ -71,15 +79,49 @@ export default function PetGallery() {
                 <div className="paw-icon"><FaPaw /></div>
                   <h5 className="pet-card-title fw-bold">{pet.name}</h5>
                   <p className="pet-card-text text-muted">{pet.description}</p>
-                  <Link to={`/pet-details/${pet.id}`} className="adopt-btn">
-                    Adopt Me
-                  </Link>
+                  <Link to={`/pet-details/${pet.id}`} className="adopt-btn">Meet {pet.name}</Link>
+
                 </div>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      <footer className="footer bg-dark text-white py-5">
+      <div className="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+        {/* Logo Section */}
+        <div className="footer-logo-container text-center text-md-start mb-4 mb-md-0">
+  <img src={Logo} alt="Animal Care & Adoption Center" className="footer-logo" />
+        </div>
+
+        {/* Visit Us Section */}
+        <div className="footer-section text-center">
+          <h5>Visit Us</h5>
+          <p className="footer-text text-start">
+    Clemente St., Lupang Pangako, Payatas Quezon City, <br />Philippines
+  </p>
+  <p className="footer-text text-start">Tel: 0965 804 7447</p>
+        </div>
+
+        {/* Opening Hours Section */}
+        <div className="footer-section text-center">
+          <h5>Opening Hours</h5>
+          <p className="footer-text text-start">Monday – Friday: 09:00 am – 09:00 pm</p>
+          <p className="footer-text text-start">Saturday – Sunday: Closed</p>
+        </div>
+      </div>
+
+      {/* Copyright & Links */}
+      <div className="text-center mt-4">
+        <hr className="footer-divider" />
+        <p>&copy; 2025 Animal Care & Adoption Center. All rights reserved.</p>
+        <p>
+          <a href="/privacy-policy" className="text-white">Privacy Policy</a> | 
+          <a href="/contact" className="text-white ms-2">Contact Us</a>
+        </p>
+      </div>
+    </footer>
     </div>
   );
 }

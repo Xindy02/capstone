@@ -1,11 +1,13 @@
 
 .body {
-  background-image: url('../../Assets/images/qcacac-bg.jpg');
   width: auto; /* Keeps the original width */
   height: auto; /* Keeps the original height */
   max-width: 100%; /* Optional: Prevents the image from exceeding its container's width */
 }
 
+.qcacac-logo {
+  margin-left: 20px; /* Adjust the value as needed */
+}
 
 .navbar {
     display: flex;
@@ -123,5 +125,66 @@
       display: none; /* Hide the login button on small screens */
     }
   }
+  .footer {
+    background-color: #212529;
+    color: #ffffff;
+    padding: 40px 0;
+  }
   
+  .footer-logo {
+    max-width: 160px;
+    height: auto;
+  }
+  
+  .footer .container {
+    display: flex;
+    align-items: center;  /* Center aligns all elements */
+    justify-content: space-between;
+  }
+  
+  .footer-section {
+    text-align: center;
+    flex: 1;
+  }
+  
+  .footer h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .footer p {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+  
+  .footer-divider {
+    border-top: 1px solid #555;
+    margin: 20px 0;
+  }
+  
+  .footer a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .footer-logo-container {
+    margin-right: 40px; /* Adds space to the right of the logo */
+  }
+  
+  @media (max-width: 768px) {
+    .footer-logo-container {
+      margin-bottom: 20px; /* Adds space below the logo on mobile */
+    }
+  
+  
+    .footer-logo-container {
+      margin-bottom: 20px;
+    }
+  
+    .footer-section {
+      padding: 10px 0;
+    }
+  }
   

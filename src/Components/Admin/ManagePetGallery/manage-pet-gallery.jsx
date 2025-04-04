@@ -97,7 +97,7 @@ export default function ManagePetGallery() {
                     <div className="paw-icon"><FaPaw /></div>
                     <Card.Title className="fw-bold">{pet.name}</Card.Title>
                     <Card.Text className="text-muted">{pet.description}</Card.Text>
-                    <Link to={`/pet-details/${pet.id}`} className="adopt-btn">
+                    <Link to={`/manage-pet-adoption-details/${pet.id}`} className="adopt-btn">
                       Adopt Me
                     </Link>
                   </Card.Body>

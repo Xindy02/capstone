@@ -1,0 +1,57 @@
+.pet-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .pet-details-header {
+    text-align: center;
+  }
+  
+  .pet-details-header h1 {
+    font-size: 2em;
+    color: #333;
+  }
+  
+  .pet-details-header p {
+    font-size: 1.2em;
+    color: #666;
+  }
+  
+  .pet-details-body {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 900px;
+  }
+  
+  .pet-image {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .pet-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .pet-info {
+    flex: 2;
+    font-size: 1.1em;
+    color: #444;
+  }
+  
+  .pet-info p {
+    margin: 10px 0;
+  }
+  
+  .pet-info strong {
+    font-weight: bold;
+    color: #333;
+  }
+  

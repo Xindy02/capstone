@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../../Assets/styles/main.css";
 import "./qc-animal-pound.css";
+import Logo from '../../Assets/images/QCACAC-LOGO.png';
 
 const PetDetailsFilter = ({ filters, setFilters, breeds, colors }) => {
   const handleFilterChange = (e) => {
@@ -34,6 +35,9 @@ const PetDetailsFilter = ({ filters, setFilters, breeds, colors }) => {
         .sort()
         .filter((color) => color !== "Others")
     : [];
+
+
+     
 
   return (
     <div className="d-flex align-items-center gap-3">
@@ -211,12 +215,7 @@ const QCAnimalPound = () => {
       {/* Navigation Bar */}
       <nav id="navbar" className="navbar">
         <div className="navbar-header">
-          <img
-            width="90px"
-            height="85px"
-            src="/images/QCACAC-LOGO.png"
-            alt="LOGO"
-          />
+        <img className="qcacac-logo" width="90px" height="85px" src="/images/QCACAC-LOGO.png" alt="LOGO" />
         </div>
         <ul className="navbar-links">
           <li><a href="/">Home</a></li>
@@ -228,6 +227,14 @@ const QCAnimalPound = () => {
               <Link to="/login-signup" className="btn login-button">Login</Link>
           </div>
         </nav>
+
+        {/* Hero Section */}
+     <header id="qcap-hero-container" className="position-relative text-center text-white">
+     <div id="qcap-hero-bg" className="qcap-hero-bg"></div> {/* Background Image */}
+     <div id="qcap-hero-overlay" className="acap-hero-overlay"></div> {/* Dark Overlay */}
+     <h1 id="qcap-hero-title" className="qcap-hero-title">Searching for Lost Pets: Let’s Bring Them Back!</h1>
+     <div id="qcap-hero-cutout" className="qcap-hero-cutout"></div> {/* Triangle Cutout */}
+   </header>
 
       {/* Pet Details Filter */}
       <div className="filter-container my-4">
@@ -312,7 +319,8 @@ const QCAnimalPound = () => {
           </div>
         </div>
       )}
-    </div>
+</div>
+    
   );
 };
 
